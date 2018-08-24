@@ -1,0 +1,23 @@
+<taglib>
+
+<tlib-version>1.0</tlib-version>.
+<jsp-version>2.0</jsp-version>
+
+<short-name>rating  </short-name>
+
+<tag>
+
+<name>ratings</name>
+<tag-class>models.RatingsDisplay</tag-class>
+<body-content>empty</body-content>
+
+<attribute> 
+	<name>course</name>
+	<required>true</required>
+	<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+</tag>
+
+
+</taglib>

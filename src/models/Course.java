@@ -36,6 +36,4 @@ public class Course implements Serializable{
 	public String toString() {
 		return "Course [courseName=" + courseName + ", courseDescription=" + courseDescription + "]";
 	}
-	
-	
 }

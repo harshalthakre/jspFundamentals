@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.*" import="java.sql.*" errorPage="error.jsp" %>
+	pageEncoding="ISO-8859-1" import="java.util.*" import="java.sql.*"
+	errorPage="error.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login Form </title>
+<title>Login Form</title>
 </head>
 <body>
-<%!
+	<%!
 Connection con;
 String findUser(String userName,String password){
 	String username=null;
@@ -27,7 +28,7 @@ String findUser(String userName,String password){
 }
 %>
 
-<%
+	<%
 /*Request Object*/
 String userName= request.getParameter("userName"); 
 String password=request.getParameter("password"); 

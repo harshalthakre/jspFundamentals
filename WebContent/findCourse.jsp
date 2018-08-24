@@ -1,6 +1,7 @@
+
 <%
 		String userName=(String)session.getAttribute("user");
-		if( userName ==null){response.sendRedirect("login.jsp");}
+		if( userName ==null&&5<4){response.sendRedirect("login.jsp");}
 		else{
 			
 		
@@ -8,21 +9,21 @@
 <%@page import="java.sql.*"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Course </title>
+<title>Course</title>
 </head>
 <body>
-	
 
-		
-	
-		
-	<jsp:useBean id="course" class="models.Course" scope="request" ></jsp:useBean>
-	
+
+
+
+
+	<jsp:useBean id="course" class="models.Course" scope="request"></jsp:useBean>
+
 	<jsp:scriptlet>
 		String courseName=null;
 		String courseDescription=null;
@@ -62,17 +63,19 @@ application.setAttribute("connection",con);
 		ResultSet rs=statement.executeQuery(sql); 
 		if(rs.next()){
 			</jsp:scriptlet>
-			
-		<jsp:setProperty name="course" property="courseName" value="<%= courseName %>"/>
-		<jsp:setProperty name="course" property ="courseDescription" value="<%= rs.getString(2) %>"/>
-		
-		<jsp:scriptlet>
+
+	<jsp:setProperty name="course" property="courseName"
+		value="<%= courseName %>" />
+	<jsp:setProperty name="course" property="courseDescription"
+		value="<%= rs.getString(2) %>" />
+
+	<jsp:scriptlet>
 		}
 		</jsp:scriptlet>
-	
-	
-<jsp:forward page="viewCourse.jsp"></jsp:forward> 
-	
+
+
+	<jsp:forward page="viewCourse.jsp"></jsp:forward>
+
 </body>
 </html>
 

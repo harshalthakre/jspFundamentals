@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<article>
-	<%! static int x=0; %>
-	<% response.setIntHeader("Refresh",1);
+	<article>
+		<%! static int x=0; %>
+		<% response.setIntHeader("Refresh",1);
 		out.println(x++);
 	%>
-</article>
+	</article>
 </body>
 </html>
